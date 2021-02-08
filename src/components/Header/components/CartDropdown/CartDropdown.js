@@ -14,14 +14,14 @@ const CartDropdown = observer(() => {
         {store.cart.length ? (
           <>
             <div className={styles.products}>
-              {store.cart.map((item) => (
-                <div className={styles.item} key={item.name}>
+              {store.cart.map(({ name, id, price, img_url }, index) => (
+                <div className={styles.item} key={name + index}>
                   <div className={styles.image}>
-                    <img src={item.img_url} alt={item.name} />
+                    <img src={img_url} alt={name} />
                   </div>
                   <div className={styles.body}>
-                    <div className={styles.name}> {item.name}</div>
-                    <div className={styles.price}> {item.price}</div>
+                    <div className={styles.name}> {name}</div>
+                    <div className={styles.price}> {price}</div>
                   </div>
                 </div>
               ))}

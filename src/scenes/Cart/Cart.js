@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import Wrapper from "../../components/Wrapper";
 import { RootStoreContext } from "../../store/rootStore";
 
@@ -19,9 +20,20 @@ const Cart = () => {
       .then((data) => console.log(data));
   };
 
+  const getTotal = () => {
+    var total = store.cart
+      .map((item) => item.price)
+      .reduce(function (a, b) {
+        return (+a + +b).toFixed(2);
+      }, 0);
+
+    return total;
+  };
+
   return (
     <Wrapper>
       <div className={styles.wrapper}>
+        <Link to="/">Back to homepage</Link>
         <h1 className={styles.title}>Cart</h1>
         <div className={styles.container}>
           <div className={styles.header}>
@@ -32,16 +44,19 @@ const Cart = () => {
             </div>
           </div>
 
-          {store.cart.map(({ id, name, img_url, price }) => (
-            <div className={styles.row} key={id}>
+          {store.cart.map(({ id, name, img_url, price }, index) => (
+            <div className={styles.row} key={name + index}>
               <div className={styles.image}>
-                <img src={img_url} alt={name} />
+                <Link to={`/product/${id}`} className={styles.link}>
+                  <img src={img_url} alt={name} />
+                </Link>
               </div>
               <div className={styles.value}>{name}</div>
               <div className={styles.value}>{price}</div>
             </div>
           ))}
         </div>
+        <div className={styles.total}>Total: {getTotal()}</div>
         <button
           type="button"
           className={styles.button}
