@@ -1,0 +1,48 @@
+@import "~styles/variables";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  padding: 0 32px;
+  box-shadow: 0 1px 10px 0px rgba(190, 197, 205, 0.5);
+  background: $white;
+  z-index: 10;
+}
+
+.iconWrap {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  svg {
+    fill: $black;
+    stroke: $black;
+    width: 28px;
+    height: auto;
+    display: block;
+  }
+}
+
+.counter {
+  position: absolute;
+  margin-top: 5px;
+  font-size: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  width: 320px;
+  right: 0;
+  box-shadow: 0 6px 10px 0 rgba($black, 0.5);
+}

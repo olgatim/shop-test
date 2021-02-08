@@ -1,0 +1,123 @@
+const products = [
+  {
+    id: 1,
+    name: "Sharable contextually-based GraphicInterface",
+    img_url: "https://via.placeholder.com/640x480.png/005555?text=iusto",
+    category: "Food Cooking Machine Operators",
+    price: "47.26",
+    discount: "1.00",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 2,
+    name: "Seamless directional moratorium",
+    img_url: "https://via.placeholder.com/640x480.png/0055aa?text=ut",
+    category: "Fence Erector",
+    price: "94.37",
+    discount: "0.90",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 3,
+    name: "Expanded client-server function",
+    img_url: "https://via.placeholder.com/640x480.png/0033bb?text=aliquam",
+    category: "Surveying and Mapping Technician",
+    price: "65.97",
+    discount: "0.80",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 4,
+    name: "Innovative 5thgeneration extranet",
+    img_url: "https://via.placeholder.com/640x480.png/00dd77?text=doloribus",
+    category: "Range Manager",
+    price: "27.38",
+    discount: "0.90",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 5,
+    name: "Optimized assymetric hierarchy",
+    img_url:
+      "https://via.placeholder.com/640x480.png/005599?text=necessitatibus",
+    category: "Railroad Conductors",
+    price: "64.94",
+    discount: "0.90",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 6,
+    name: "Re-contextualized bandwidth-monitored functionalities",
+    img_url: "https://via.placeholder.com/640x480.png/002200?text=fugit",
+    category: "Director Of Social Media Marketing",
+    price: "45.53",
+    discount: "0.60",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 7,
+    name: "Visionary radical capacity",
+    img_url: "https://via.placeholder.com/640x480.png/0044dd?text=ab",
+    category: "Sailor",
+    price: "61.64",
+    discount: "0.90",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 8,
+    name: "Focused 24/7 interface",
+    img_url: "https://via.placeholder.com/640x480.png/0066aa?text=ipsam",
+    category: "Career Counselor",
+    price: "92.36",
+    discount: "0.70",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 9,
+    name: "Sharable full-range analyzer",
+    img_url: "https://via.placeholder.com/640x480.png/00ffbb?text=quidem",
+    category: "Tire Changer",
+    price: "51.95",
+    discount: "0.60",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+  {
+    id: 10,
+    name: "Visionary global time-frame",
+    img_url: "https://via.placeholder.com/640x480.png/00aa00?text=nihil",
+    category: "Visual Designer",
+    price: "69.41",
+    discount: "0.70",
+    created_at: "2021-01-26T18:58:11.000000Z",
+    updated_at: "2021-01-26T18:58:11.000000Z",
+    deleted_at: null,
+  },
+];
+
+const getProducts = async () => {
+  return products;
+};
+
+const getSingleProduct = async (id) => {
+  return products[id - 1];
+};
+
+export { getProducts, getSingleProduct };

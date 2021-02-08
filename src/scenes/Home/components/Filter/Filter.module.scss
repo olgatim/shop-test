@@ -1,0 +1,27 @@
+@import "~styles/variables";
+
+.row {
+  display: flex;
+  cursor: pointer;
+
+  + .row {
+    margin-top: 16px;
+  }
+}
+
+.value {
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba($black, 0.5);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.active {
+  font-weight: bold;
+}

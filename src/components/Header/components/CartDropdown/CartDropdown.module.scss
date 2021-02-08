@@ -1,0 +1,46 @@
+@import "~styles/variables";
+
+.wrapper {
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.container {
+  background: $white;
+  padding: 16px 16px 32px;
+}
+
+.item {
+  display: flex;
+
+  + .item {
+    margin-top: 16px;
+  }
+}
+
+.image {
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  margin-right: 12px;
+}
+
+.link {
+  display: block;
+  margin-top: 32px;
+  display: block;
+  padding: 8px 16px;
+  border: 1px solid $black;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}

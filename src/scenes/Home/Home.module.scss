@@ -1,0 +1,82 @@
+@import "~styles/variables";
+
+.wrapper {
+  @media (min-width: $lg) {
+    display: flex;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template: auto/repeat(3, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+
+  @media (max-width: $xl) {
+    grid-template: auto/repeat(2, 1fr);
+  }
+
+  @media (max-width: $md) {
+    display: block;
+  }
+}
+
+.content {
+  width: 100%;
+}
+
+.aside {
+  max-width: 260px;
+  width: 100%;
+  margin-right: 20px;
+  padding-right: 16px;
+  border-right: 1px solid rgba($black, 0.15);
+
+  @media (max-width: $lg) {
+    max-width: none;
+    position: relative;
+  }
+}
+
+.filterLabel {
+  font-size: 24px;
+  margin-bottom: 32px;
+  display: flex;
+
+  @media (max-width: $lg) {
+    cursor: pointer;
+  }
+}
+
+.filerWrap {
+  padding-left: 16px;
+
+  @media (max-width: $lg) {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 16px);
+    background: $white;
+    padding: 16px;
+    box-shadow: 0 6px 10px 0 rgba($black, 0.2);
+    display: none;
+
+    &.filterOpen {
+      display: block;
+    }
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  display: block;
+  border-width: 6px;
+  border-style: solid;
+  border-color: $black transparent transparent transparent;
+  margin-top: 12px;
+  margin-left: 8px;
+
+  @media (min-width: $lg) {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+@import "~styles/variables";
+
+.wrapper {
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sidebar {
+  max-width: 33%;
+  width: 100%;
+
+  @media (max-width: $lg) {
+    margin-top: 32px;
+    max-width: none;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-right: 64px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.name {
+  font-size: 32px;
+  margin-bottom: 32px;
+
+  @media (max-width: $lg) {
+    font-size: 24px;
+  }
+}
+
+.category {
+  color: rgba($black, 0.5);
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 18px;
+
+  span {
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+.button {
+  padding: 8px 0;
+  min-width: 220px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-top: 32px;
+  border: 1px solid $black;
+}
