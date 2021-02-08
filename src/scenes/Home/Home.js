@@ -50,7 +50,6 @@ const Home = () => {
   };
 
   const handleFilterLabelClick = () => {
-    console.log("click");
     setIsFilterOpen((isOpen) => !isOpen);
   };
 

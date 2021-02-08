@@ -15,7 +15,7 @@ const Cart = () => {
   };
 
   const handlePurchaseClick = () => {
-    fetch("​http://167.172.186.154/api/purchase", requestOptions)
+    fetch("http://167.172.186.154/api/purchase", requestOptions)
       .then((response) => response.json())
       .then((data) => console.log(data));
   };
